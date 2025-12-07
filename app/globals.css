@@ -1,26 +1,89 @@
 @import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-deep-black: #000000;
+  --color-ghost-white: #F8F8F8;
+  --color-faded-orange: #FF9F40;
+  --color-muted-gray: #6E6E6E;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --color-black: #000000;
+  --color-ghost-white: #F8F8F8;
+  --color-faded-orange: #FF9F40;
+  --color-muted-gray: #6E6E6E;
+  --font-sans: var(--font-inter);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-deep-black);
+  color: var(--color-ghost-white);
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Leaflet map styling for black and white theme - High resolution */
+.leaflet-container {
+  background: #000000;
+  filter: grayscale(100%) contrast(1.2);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+.leaflet-tile-container img {
+  filter: grayscale(100%) contrast(1.2);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* High resolution marker styling */
+.high-res-marker {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+
+/* Highlighted marker styling for filtered results */
+.highlighted-marker {
+  animation: pulse-highlight 2s ease-in-out infinite;
+  filter: drop-shadow(0 0 8px rgba(255, 159, 64, 0.8));
+}
+
+@keyframes pulse-highlight {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+.leaflet-popup-content-wrapper {
+  background: #F8F8F8;
+  color: #000000;
+  border-radius: 8px;
+}
+
+.leaflet-popup-tip {
+  background: #F8F8F8;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6E6E6E;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF9F40;
 }
