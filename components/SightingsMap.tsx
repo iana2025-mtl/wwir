@@ -84,11 +84,11 @@ const createCustomIcon = () => {
     <svg width="50" height="82" viewBox="0 0 25 41" xmlns="http://www.w3.org/2000/svg" style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;">
       <defs>
         <filter id="shadow">
-          <feDropShadow dx="0" dy="1" stdDeviation="1" flood-opacity="0.3"/>
+          <feDropShadow dx="0" dy="1" stdDeviation="2" flood-opacity="0.6" flood-color="#00FFFF"/>
         </filter>
       </defs>
-      <path fill="#FF9F40" stroke="#000" stroke-width="0.8" d="M12.5 0C5.6 0 0 5.6 0 12.5c0 8.5 12.5 28.5 12.5 28.5S25 21 25 12.5C25 5.6 19.4 0 12.5 0z" filter="url(#shadow)"/>
-      <circle fill="#000" cx="12.5" cy="12.5" r="4"/>
+      <path fill="#FF1493" stroke="#00FFFF" stroke-width="1.2" d="M12.5 0C5.6 0 0 5.6 0 12.5c0 8.5 12.5 28.5 12.5 28.5S25 21 25 12.5C25 5.6 19.4 0 12.5 0z" filter="url(#shadow)"/>
+      <circle fill="#00FFFF" cx="12.5" cy="12.5" r="4"/>
     </svg>
   `;
   const iconUrl = "data:image/svg+xml;base64," + btoa(svgString);
@@ -136,7 +136,7 @@ export default function SightingsMap({
       <svg width="50" height="82" viewBox="0 0 25 41" xmlns="http://www.w3.org/2000/svg" style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;">
         <defs>
           <filter id="shadow-highlight">
-            <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.6" flood-color="#FF9F40"/>
+            <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.8" flood-color="#FF1493"/>
           </filter>
           <filter id="glow">
             <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
@@ -146,8 +146,8 @@ export default function SightingsMap({
             </feMerge>
           </filter>
         </defs>
-        <path fill="#FF9F40" stroke="#000" stroke-width="0.8" d="M12.5 0C5.6 0 0 5.6 0 12.5c0 8.5 12.5 28.5 12.5 28.5S25 21 25 12.5C25 5.6 19.4 0 12.5 0z" filter="url(#shadow-highlight) url(#glow)"/>
-        <circle fill="#000" cx="12.5" cy="12.5" r="4"/>
+        <path fill="#FF1493" stroke="#00FFFF" stroke-width="1.2" d="M12.5 0C5.6 0 0 5.6 0 12.5c0 8.5 12.5 28.5 12.5 28.5S25 21 25 12.5C25 5.6 19.4 0 12.5 0z" filter="url(#shadow-highlight) url(#glow)"/>
+        <circle fill="#00FFFF" cx="12.5" cy="12.5" r="5"/>
       </svg>
     `;
     const iconUrl = "data:image/svg+xml;base64," + btoa(svgString);

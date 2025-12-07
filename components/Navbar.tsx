@@ -7,7 +7,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="bg-black border-b border-muted-gray/20">
+    <nav className="bg-black border-b-2 border-faded-orange shadow-lg shadow-faded-orange/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -33,8 +33,8 @@ export default function Navbar() {
               href="/"
               className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                 pathname === "/"
-                  ? "bg-faded-orange text-black"
-                  : "text-ghost-white hover:bg-muted-gray/20"
+                  ? "bg-faded-orange text-black font-bold shadow-lg"
+                  : "text-ghost-white hover:bg-muted-gray/30 hover:shadow-md"
               }`}
             >
               Sightings Map
@@ -43,8 +43,8 @@ export default function Navbar() {
               href="/post-sighting"
               className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                 pathname === "/post-sighting"
-                  ? "bg-faded-orange text-black"
-                  : "text-ghost-white hover:bg-muted-gray/20"
+                  ? "bg-faded-orange text-black font-bold shadow-lg"
+                  : "text-ghost-white hover:bg-muted-gray/30 hover:shadow-md"
               }`}
             >
               Post a Sighting

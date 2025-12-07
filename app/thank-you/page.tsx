@@ -22,8 +22,8 @@ export default function ThankYou() {
                 cy="150"
                 rx="50"
                 ry="20"
-                fill="#8B4513"
-                stroke="#654321"
+                fill="#9D4EDD"
+                stroke="#00FFFF"
                 strokeWidth="2"
               />
               <rect
@@ -31,8 +31,8 @@ export default function ThankYou() {
                 y="130"
                 width="80"
                 height="40"
-                fill="#8B4513"
-                stroke="#654321"
+                fill="#9D4EDD"
+                stroke="#00FFFF"
                 strokeWidth="2"
                 rx="5"
               />
@@ -40,32 +40,32 @@ export default function ThankYou() {
               {/* Plants/Leaves */}
               <path
                 d="M 100 130 Q 80 100 70 80 Q 75 70 85 75 Q 90 65 100 70 Q 110 65 115 75 Q 125 70 130 80 Q 120 100 100 130"
-                fill="#228B22"
-                stroke="#006400"
+                fill="#00FFFF"
+                stroke="#FF1493"
                 strokeWidth="1.5"
               />
               
               {/* Berries */}
-              <circle cx="90" cy="90" r="4" fill="#F8F8F8" />
-              <circle cx="110" cy="95" r="4" fill="#F8F8F8" />
-              <circle cx="95" cy="105" r="4" fill="#F8F8F8" />
+              <circle cx="90" cy="90" r="4" fill="#FF1493" />
+              <circle cx="110" cy="95" r="4" fill="#FF1493" />
+              <circle cx="95" cy="105" r="4" fill="#FF1493" />
               
               {/* Smoke/Wisp effect */}
               <path
                 d="M 100 80 Q 95 60 100 50 Q 105 40 100 30"
-                stroke="#6E6E6E"
+                stroke="#00FFFF"
                 strokeWidth="3"
                 fill="none"
                 strokeLinecap="round"
-                opacity="0.6"
+                opacity="0.8"
               />
               <path
                 d="M 100 75 Q 110 55 115 45 Q 120 35 115 25"
-                stroke="#6E6E6E"
+                stroke="#FF1493"
                 strokeWidth="2"
                 fill="none"
                 strokeLinecap="round"
-                opacity="0.4"
+                opacity="0.6"
               />
             </svg>
           </div>
@@ -74,7 +74,7 @@ export default function ThankYou() {
         <div className="space-y-4">
           <a
             href="/"
-            className="inline-block bg-faded-orange text-black px-6 py-3 rounded-md font-semibold hover:bg-faded-orange/90 transition-colors"
+            className="inline-block bg-faded-orange text-black px-6 py-3 rounded-md font-semibold hover:bg-faded-orange/90 transition-colors shadow-lg shadow-faded-orange/50"
           >
             View All Sightings
           </a>

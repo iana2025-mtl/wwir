@@ -727,23 +727,23 @@ export default function Home() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-          <div className="bg-ghost-white text-black p-6 rounded-lg border-2 border-black">
-            <h3 className="text-sm font-medium text-black/70 mb-1">
+          <div className="bg-ghost-white text-black p-6 rounded-lg border-2 border-faded-orange shadow-lg shadow-faded-orange/50">
+            <h3 className="text-sm font-medium text-black/80 mb-1">
               Total Sightings
             </h3>
-            <p className="text-3xl font-bold">{stats.totalSightings.toLocaleString()}</p>
+            <p className="text-3xl font-bold text-black">{stats.totalSightings.toLocaleString()}</p>
           </div>
-          <div className="bg-ghost-white text-black p-6 rounded-lg border-2 border-black">
-            <h3 className="text-sm font-medium text-black/70 mb-1">
+          <div className="bg-ghost-white text-black p-6 rounded-lg border-2 border-faded-orange shadow-lg shadow-faded-orange/50">
+            <h3 className="text-sm font-medium text-black/80 mb-1">
               Most Recent Sighting
             </h3>
-            <p className="text-3xl font-bold">{stats.mostRecentSighting}</p>
+            <p className="text-3xl font-bold text-black">{stats.mostRecentSighting}</p>
           </div>
-          <div className="bg-ghost-white text-black p-6 rounded-lg border-2 border-black">
-            <h3 className="text-sm font-medium text-black/70 mb-1">
+          <div className="bg-ghost-white text-black p-6 rounded-lg border-2 border-faded-orange shadow-lg shadow-faded-orange/50">
+            <h3 className="text-sm font-medium text-black/80 mb-1">
               Most Ghostly City
             </h3>
-            <p className="text-3xl font-bold">{stats.mostGhostlyCity}</p>
+            <p className="text-3xl font-bold text-black">{stats.mostGhostlyCity}</p>
           </div>
         </div>
 
@@ -776,7 +776,7 @@ export default function Home() {
               />
             </div>
             {selectedSighting && (
-              <div className="mt-4 bg-ghost-white text-black p-4 rounded-lg">
+              <div className="mt-4 bg-ghost-white text-black p-4 rounded-lg border-2 border-faded-orange shadow-lg">
                 <h3 className="font-semibold mb-2">{selectedSighting.type}</h3>
                 <p className="text-sm mb-1">
                   <strong>Date of Sighting:</strong> {selectedSighting.date}
@@ -878,7 +878,7 @@ export default function Home() {
         {/* Sightings Table */}
         <div className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">Sightings Table</h2>
-          <div className="bg-ghost-white text-black rounded-lg border-2 border-black p-6">
+          <div className="bg-ghost-white text-black rounded-lg border-2 border-faded-orange p-6 shadow-lg">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>

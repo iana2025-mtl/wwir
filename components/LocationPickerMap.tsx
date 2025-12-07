@@ -11,11 +11,11 @@ const createCustomIcon = () => {
     <svg width="50" height="82" viewBox="0 0 25 41" xmlns="http://www.w3.org/2000/svg" style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;">
       <defs>
         <filter id="shadow-picker">
-          <feDropShadow dx="0" dy="1" stdDeviation="1" flood-opacity="0.3"/>
+          <feDropShadow dx="0" dy="1" stdDeviation="2" flood-opacity="0.6" flood-color="#00FFFF"/>
         </filter>
       </defs>
-      <path fill="#000" stroke="#FF9F40" stroke-width="0.8" d="M12.5 0C5.6 0 0 5.6 0 12.5c0 8.5 12.5 28.5 12.5 28.5S25 21 25 12.5C25 5.6 19.4 0 12.5 0z" filter="url(#shadow-picker)"/>
-      <circle fill="#FF9F40" cx="12.5" cy="12.5" r="4"/>
+      <path fill="#9D4EDD" stroke="#00FFFF" stroke-width="1.2" d="M12.5 0C5.6 0 0 5.6 0 12.5c0 8.5 12.5 28.5 12.5 28.5S25 21 25 12.5C25 5.6 19.4 0 12.5 0z" filter="url(#shadow-picker)"/>
+      <circle fill="#FF1493" cx="12.5" cy="12.5" r="4"/>
     </svg>
   `;
   return new Icon({

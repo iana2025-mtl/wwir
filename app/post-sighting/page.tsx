@@ -150,7 +150,7 @@ export default function PostSighting() {
             <button
               type="submit"
               disabled={!locationSelected}
-              className="w-full bg-black text-ghost-white px-6 py-4 rounded-md font-semibold text-lg border-2 border-ghost-white hover:bg-ghost-white hover:text-black transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-faded-orange text-black px-6 py-4 rounded-md font-semibold text-lg border-2 border-ghost-white hover:bg-ghost-white hover:text-black transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-faded-orange/50 hover:shadow-xl hover:shadow-faded-orange/70"
             >
               Post Your Sighting
             </button>

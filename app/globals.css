@@ -2,17 +2,17 @@
 @import "leaflet/dist/leaflet.css";
 
 :root {
-  --color-deep-black: #000000;
-  --color-ghost-white: #F8F8F8;
-  --color-faded-orange: #FF9F40;
-  --color-muted-gray: #6E6E6E;
+  --color-deep-black: #1a0033;
+  --color-ghost-white: #00FFFF;
+  --color-faded-orange: #FF1493;
+  --color-muted-gray: #9D4EDD;
 }
 
 @theme {
-  --color-black: #000000;
-  --color-ghost-white: #F8F8F8;
-  --color-faded-orange: #FF9F40;
-  --color-muted-gray: #6E6E6E;
+  --color-black: #1a0033;
+  --color-ghost-white: #00FFFF;
+  --color-faded-orange: #FF1493;
+  --color-muted-gray: #9D4EDD;
   --font-sans: var(--font-inter);
 }
 
@@ -22,16 +22,31 @@ body {
   font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-/* Leaflet map styling for black and white theme - High resolution */
+/* Funky gradient background */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 50%, rgba(255, 20, 147, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 40% 20%, rgba(157, 78, 221, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Leaflet map styling with funky color overlay - High resolution */
 .leaflet-container {
-  background: #000000;
-  filter: grayscale(100%) contrast(1.2);
+  background: #1a0033;
+  filter: contrast(1.1) saturate(1.2);
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
 }
 
 .leaflet-tile-container img {
-  filter: grayscale(100%) contrast(1.2);
+  filter: contrast(1.1) saturate(1.2) hue-rotate(280deg);
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
 }
@@ -46,7 +61,7 @@ body {
 /* Highlighted marker styling for filtered results */
 .highlighted-marker {
   animation: pulse-highlight 2s ease-in-out infinite;
-  filter: drop-shadow(0 0 8px rgba(255, 159, 64, 0.8));
+  filter: drop-shadow(0 0 12px rgba(255, 20, 147, 1)) drop-shadow(0 0 8px rgba(0, 255, 255, 0.8));
 }
 
 @keyframes pulse-highlight {
@@ -60,14 +75,30 @@ body {
   }
 }
 
+/* Funky glow effects */
+@keyframes funky-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(255, 20, 147, 0.5), 0 0 20px rgba(0, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 20, 147, 0.8), 0 0 30px rgba(0, 255, 255, 0.5), 0 0 40px rgba(157, 78, 221, 0.3);
+  }
+}
+
+.funky-glow {
+  animation: funky-glow 3s ease-in-out infinite;
+}
+
 .leaflet-popup-content-wrapper {
-  background: #F8F8F8;
-  color: #000000;
+  background: linear-gradient(135deg, #00FFFF 0%, #FF1493 100%);
+  color: #1a0033;
   border-radius: 8px;
+  border: 2px solid #9D4EDD;
 }
 
 .leaflet-popup-tip {
-  background: #F8F8F8;
+  background: #00FFFF;
+  border: 2px solid #9D4EDD;
 }
 
 /* Custom scrollbar */
@@ -76,14 +107,14 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: #1a0033;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #6E6E6E;
+  background: #9D4EDD;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #FF9F40;
+  background: #FF1493;
 }
